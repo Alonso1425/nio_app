@@ -77,7 +77,7 @@ class ClientesScreen extends StatelessWidget {
                     'Cliente $index',
                     'RFC-$index',
                     PopupMenuButton<String>(
-                      surfaceTintColor: Colors.white,
+                      surfaceTintColor: Colors.blueGrey,
                       onSelected: (value) {
                         if (value == 'addMarca') {
                           /// print('Agregar Marca Para Cliente: $index');
@@ -101,8 +101,7 @@ class ClientesScreen extends StatelessWidget {
                         const PopupMenuItem(
                           value: 'designMarca',
                           child: ListTile(
-                            leading:
-                                Icon(Icons.assignment, color: Colors.orange),
+                            leading: Icon(Icons.assignment, color: Colors.red),
                             title: Text('Designar Marca'),
                           ),
                         ),
@@ -123,7 +122,7 @@ class ClientesScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
 
-              /// TABLA 2
+              ///TABLA 2
               /// SEGUNDA TABLA - MARCAS
               _buildCardTable(
                 title: 'Marcas',
@@ -210,7 +209,7 @@ class ClientesScreen extends StatelessWidget {
           const SizedBox(height: 20),
           Container(
             decoration: BoxDecoration(
-              border: Border.all(color: Colors.black38, width: 1.5),
+              border: Border.all(color: Colors.black26, width: 1.5),
             ),
             child: SingleChildScrollView(
               scrollDirection: Axis.horizontal,
@@ -415,6 +414,7 @@ class ClientesScreen extends StatelessWidget {
                   const SizedBox(height: 10),
                   _buildTextField(
                       'Nombre de la Marca', 'Ingresa el nombre de la marca'),
+
                   // Botones
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
@@ -440,7 +440,6 @@ class ClientesScreen extends StatelessWidget {
                               vertical: 12, horizontal: 20),
                         ),
                         onPressed: () {
-                          //print('Guardar');
                           // Acción de guardar
                         },
                         child: const Text('Guardar'),
@@ -456,6 +455,8 @@ class ClientesScreen extends StatelessWidget {
       },
     );
   }
+
+  // FORMULARIO PARA EDITAR MARCA
 
   /// WIDGET PARA CADA CAMPO DE TEXTO
   Widget _buildTextField(String label, String hintText) {
