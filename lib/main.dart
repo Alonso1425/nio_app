@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nio_app/requisiciones_screen.dart';
 import 'package:provider/provider.dart';
 import 'login_screen.dart';
 import 'auth_provider.dart';
@@ -33,6 +34,7 @@ class MyApp extends StatelessWidget {
       // Definición de rutas
       routes: {
         '/menu': (context) => const MenuScreen(),
+        '/requisiciones': (context) => const RequisicionesScreen(),
       },
     );
   }

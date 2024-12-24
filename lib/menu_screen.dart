@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:nio_app/clientes_screen.dart';
 import 'package:nio_app/login_screen.dart';
+import 'package:nio_app/requisiciones_screen.dart';
 
 class MenuScreen extends StatelessWidget {
   const MenuScreen({super.key});
@@ -94,7 +95,13 @@ class MenuScreen extends StatelessWidget {
                 ),
                 ListTile(
                   title: const Text('Control de Requisiciones'),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const RequisicionesScreen()),
+                    );
+                  },
                 ),
                 ListTile(
                   title: const Text('Control de Materiales'),
