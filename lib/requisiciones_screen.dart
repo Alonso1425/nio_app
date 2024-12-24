@@ -46,22 +46,27 @@ class RequisicionesScreen extends StatelessWidget {
         ),
         body: Column(
           children: [
-            const Align(
-              alignment: Alignment.center,
-              child: Text(
-                'Lista de Requisiciones',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
+            const Padding(
+              padding: EdgeInsets.only(top: 20),
+              child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  'Lista de Requisiciones',
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
                 ),
               ),
             ),
-            Row(
+            const SizedBox(height: 20),
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 ElevatedButton.icon(
                   onPressed: () {
                     //ACCION DEL PRIMER BOTON
+                    //print('FORMULARIO DE CREACION DE REQUISICION DE MATERIAL');
                   },
                   icon: const Icon(Icons.note_add, color: Colors.white),
                   label: const Text(
@@ -74,10 +79,12 @@ class RequisicionesScreen extends StatelessWidget {
                         const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
                   ),
                 ),
-                const SizedBox(width: 30),
+                const SizedBox(width: 10),
+                const SizedBox(height: 20),
                 ElevatedButton.icon(
                   onPressed: () {
                     //ACCION DEL SEGUNDO BOTON
+                    //print('FORMULARIO DE CREACION DE REQUISICION DE SERVICIO');
                   },
                   icon: const Icon(Icons.note_add, color: Colors.white),
                   label: const Text('Requisición de Servicio',
@@ -89,7 +96,7 @@ class RequisicionesScreen extends StatelessWidget {
                   ),
                 ),
               ],
-            )
+            ),
           ],
         ));
   }
