@@ -122,7 +122,7 @@ class LoginScreen extends StatelessWidget {
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   const SnackBar(
                                     content: Text(
-                                        'Por favor, complete todos los campos.'),
+                                        'Por Favor, Complete Todos Los Campos.'),
                                     backgroundColor: Colors.red,
                                   ),
                                 );
